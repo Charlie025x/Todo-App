@@ -15,4 +15,74 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+
+    display: grid;
+    grid:
+        "header header header header" auto
+        "...... lists  active ......" auto /
+        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+.title {
+    grid-area: header;
+    text-align: center;
+    font-size: calc(7vw +2rem);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    margin: 0 0 0.5em;
+}
+
+.all-tasks {
+    grid-area: lists;
+}
+
+.task-list {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    list-style: circle;
+    padding-left: 1.1em;
+}
+
+form {
+    display: flex;
+}
+
+.new {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    outline: none;
+
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: inherit;
+        opacity: .8; /* Firefox */
+      }
+
+    &:focus {
+        border-bottom-width: 3px;
+    }
+
+    &:focus::placeholder {
+        opacity: 0.5;
+    }
+
+    &.list {
+        font-size: 1.1rem;
+    }
+}
+
+.active-list {
+    font-weight: 700;
+}
+
+.todo-list {
+    grid-area: active;
 }
