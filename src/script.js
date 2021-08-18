@@ -67,11 +67,7 @@ newTaskForm.addEventListener('submit', e => {
 })
 
 function createList(name) {
-    return { id: Date.now().toString(), name: name, tasks: [{
-        id: 'asdf',
-        name: 'test',
-        complete: true
-    }]}
+    return { id: Date.now().toString(), name: name, tasks: []}
 }
 
 function createTask(name) {

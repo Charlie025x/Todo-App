@@ -18,7 +18,7 @@ body {
   background-color: var(--clr-primary);
   color: var(--clr-light);
   display: grid;
-  grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+  grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(50px, 300px) minmax(50px, 500px) 1fr;
 }
 
 .title {
@@ -26,7 +26,7 @@ body {
   text-align: center;
   font-size: calc(7vw +2rem);
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.1);
+  color: silver;
   letter-spacing: 1px;
   margin: 0 0 0.5em;
 }
@@ -105,6 +105,7 @@ form {
 }
 .new.task {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .active-list {
@@ -225,6 +226,27 @@ form {
   left: 0;
   bottom: -35px;
   color: var(--clr-light);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid: "header header header header" auto "...... lists  lists ......" auto "...... active  active ......" auto/1fr minmax(100px, 200px) minmax(100px, 200px) 1fr;
+  }
+
+  .new.list {
+    font-size: 1.1rem;
+    width: min(208px, 100%);
+    /*new*/
+  }
+  .new.task {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .task-list + form {
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

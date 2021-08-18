@@ -195,11 +195,7 @@ function createList(name) {
   return {
     id: Date.now().toString(),
     name: name,
-    tasks: [{
-      id: 'asdf',
-      name: 'test',
-      complete: true
-    }]
+    tasks: []
   };
 }
 
@@ -310,7 +306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55477" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52535" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
